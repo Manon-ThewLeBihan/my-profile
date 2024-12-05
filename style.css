@@ -1,0 +1,185 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F6F5F2;
+  color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+.profile-container {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Reduced spacing between boxes */
+  margin: 20px 0; /* Adds space at the top and bottom of the page */
+}
+
+/* Card styles */
+.card-beige {
+  background-color: #F6F0EA;
+  padding: 12px 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-beige img {
+  width: 200px; /* Fixed width for circular shape */
+  height: 200px; /* Fixed height matching the width */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image doesn't distort */
+  margin: 15px 0;
+}
+
+.card-beige p {
+  text-align: justify;
+}
+
+.card-beige a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #DBB5B5;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card-beige a:hover {
+  background-color: #bfb7b6;
+}
+
+/* Headings */
+h1 {
+  color: #987070;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #C39898;
+  font-size: 1.5em;
+}
+
+/* Social links */
+.follow-me .social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li a {
+  font-size: 1.5em;
+  color: #323232;
+}
+
+.social-links li a:hover {
+  color: #987070;
+}
+
+/* Responsive Design: Media Queries */
+@media (max-width: 960px) {
+  .profile-container {
+    max-width: 700px;
+    gap: 20px; /* Reduce spacing between cards */
+  }
+
+  .card-beige img {
+    width: 180px; /* Reduced size for smaller screens */
+    height: 180px; /* Matching height to maintain circular shape */
+  }
+
+  .card-beige p {
+    font-size: 0.9em; /* Slightly smaller text */
+  }
+
+  h1 {
+    font-size: 1.8em; /* Adjust heading size */
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .card-beige a {
+    padding: 8px 16px; /* Adjust button size */
+  }
+}
+
+@media (max-width: 720px) {
+  .profile-container {
+    max-width: 500px;
+  }
+
+  .card-beige img {
+    width: 150px; /* Smaller size for smaller devices */
+    height: 150px; /* Maintain circular shape */
+  }
+
+  .card-beige p {
+    font-size: 0.85em; /* Further reduce text size */
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .social-links li a {
+    font-size: 1.2em; /* Reduce icon size */
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align to the left */
+    padding: 10px;
+  }
+
+  .profile-container {
+    width: 100%; /* Utilize full width */
+  }
+
+  .card-beige {
+    padding: 10px 15px;
+  }
+
+  .card-beige img {
+    width: 120px; /* Further reduce size for very small devices */
+    height: 120px; /* Maintain circular shape */
+  }
+
+  .card-beige p {
+    font-size: 0.8em; /* Smallest text size for tiny screens */
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  .card-beige a {
+    padding: 6px 12px;
+  }
+}
